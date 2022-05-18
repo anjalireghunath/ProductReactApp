@@ -12,13 +12,15 @@ const ViewBook = () => {
             <div className="row g-3">
                {productlist.map((value,key)=>{
                    return <div className='col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4'>
-                   <div className="card">
-                   <img src={value.image} className="card-img-top" alt="..."/>
+                   <div className="card" style={{height:500}}>
+                <center>   <img style={{width:250,height:250}} src={value.image} className="card-img-top" alt="..."/></center>
                    <div className="card-body">
                      <h5 className="card-title">{value.id}</h5>
                      <p className="card-text">Title:  {value.title}</p>
                      <p className="card-text">Price:  {value.price}</p>
                      <p className="card-text">Description:  {value.description}</p>
+                     <p className="card-text">Category:  {value.category}</p>
+                     <p className="card-text">Rating {value.rating.rate}</p>
                      <a href="#" className="btn btn-primary">Buy Now</a>
                    </div>
                  </div>
